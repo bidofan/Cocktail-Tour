@@ -59,3 +59,4 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'faker'
 end
+gem 'rubocop', '~> 0.47.1'
