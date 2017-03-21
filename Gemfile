@@ -60,3 +60,8 @@ group :development, :test do
   gem 'faker'
 end
 gem 'rubocop', '~> 0.47.1'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
