@@ -15,6 +15,15 @@ class RecipesController < ApplicationController
 		@recipes = Recipe.find(params[:id])
 	end
 
+	def create
+		@recipes = Recipe.new(recipe_params)
+		if @recipes.save
+			redirect_to @recipes
+		else 
+			render 'new'
+		end
+	end
+
 	private
 		def recipe_params
 			params.require(:recipes).permit(:text, :recipe)
