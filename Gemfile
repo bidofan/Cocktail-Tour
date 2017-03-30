@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.0.2'
-gem 'mysql2'
+gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -45,5 +45,3 @@ gem 'omniauth-vkontakte'
 gem 'bootstrap-sass'
 gem 'gmaps4rails'
 gem 'geocoder'
-gem 'pg', group: :production
-gem 'mysql', group: :development

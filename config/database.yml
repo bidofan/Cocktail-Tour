@@ -1,10 +1,10 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password: trigun19731982
   host: localhost
+  username: pguser
+  password: trigun19731982
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -18,4 +18,4 @@ production:
   <<: *default
   database: Cocktail_Tour_production
   username: Cocktail_Tour
-  password: <%= ENV['COCKTAIL_TOUR_DATABASE_PASSWORD'] %>
+  password: <%= ENV['COCKTAIL_TOUR_PASSWORD'] %>
