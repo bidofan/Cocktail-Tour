@@ -1,5 +1,7 @@
-require jquery
-bootstrap.min
-require jquery_ujs
-require turbolinks
-require_tree .
+//= require jquery
+//= require underscore
+//= require gmaps/google
+//= bootstrap.min
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
