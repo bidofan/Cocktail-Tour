@@ -107,6 +107,7 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    mysql (2.9.1)
     mysql2 (0.4.5)
     nio4r (2.0.0)
     nokogiri (1.7.1)
@@ -137,6 +138,7 @@ GEM
     orm_adapter (0.5.0)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pg (0.20.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -266,11 +268,13 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mysql
   mysql2
   omniauth
   omniauth-facebook
   omniauth-twitter
   omniauth-vkontakte
+  pg
   pry-byebug
   pry-rails
   puma (~> 3.0)

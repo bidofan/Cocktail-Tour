@@ -45,3 +45,5 @@ gem 'omniauth-vkontakte'
 gem 'bootstrap-sass'
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'pg', group: :production
+gem 'mysql', group: :development
