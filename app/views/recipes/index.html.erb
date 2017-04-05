@@ -1,0 +1,23 @@
+<h1>Listing recipes</h1>
+ 
+ 
+  <% @recipes.each do |recipes| %>
+   <hr>
+
+                <p class="lead">Name:<%= recipes.name  %></p>
+                <p>Recipe: <%= recipes.recipe %></p>
+
+                <hr>
+
+                <div class="well">
+                    <h4>Leave a Comment:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+      <td><%= link_to 'Show', recipes_path(recipes) %></td>
+  <% end %>
+             
