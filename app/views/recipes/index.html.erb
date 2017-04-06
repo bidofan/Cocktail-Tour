@@ -18,6 +18,10 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-      <td><%= link_to 'Show', recipes_path(recipes) %></td>
+      <td><%= link_to 'Show', recipe_path(recipes) %></td>
+      <td><%= link_to 'Edit', edit_recipe_path(recipes) %></td>
+      <td><%= link_to 'Remove', recipe_path(recipes),
+              method: :delete,
+              data: { confirm: 'Are you confirm the removing?' } %></td>
   <% end %>
              
