@@ -6,9 +6,14 @@
 
                 <p class="lead">Name:<%= recipes.name  %></p>
                 <p>Recipe: <%= recipes.recipe %></p>
-
+                                      <ul class="nav nav-pills">
+                        <li role="presentation"><%= link_to 'Show', recipe_path(recipes) %></li>
+                        <li role="presentation"><%= link_to 'Edit', edit_recipe_path(recipes) %></li>
+                        <li role="presentation"><%= link_to 'Remove', recipe_path(recipes),
+              method: :delete,
+              data: { confirm: 'Are you confirm the removing?' } %></li>
+                      </ul>
                 <hr>
-
                 <div class="well">
                     <h4>Leave a Comment:</h4>
                     <form role="form">
@@ -18,10 +23,5 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-      <td><%= link_to 'Show', recipe_path(recipes) %></td>
-      <td><%= link_to 'Edit', edit_recipe_path(recipes) %></td>
-      <td><%= link_to 'Remove', recipe_path(recipes),
-              method: :delete,
-              data: { confirm: 'Are you confirm the removing?' } %></td>
   <% end %>
              

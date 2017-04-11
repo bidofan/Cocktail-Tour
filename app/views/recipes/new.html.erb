@@ -15,5 +15,8 @@
   <% end %>
   <%= f.input :name %>
   <%= f.input :recipe %>
-  <%= f.button :submit %>
+  <%= f.button :submit, "Create" %>
+  <ul class="nav nav-pills">
+   <li role="presentation"><%= link_to "Back", recipes_path %></li>
+</ul>
 <% end %>
