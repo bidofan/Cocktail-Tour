@@ -1,7 +1,7 @@
 default: &default
-  host: ec2-23-21-246-11.compute-1.amazonaws.com
-  username: vqyzkxkbruelso
-  password: 346928028bb3ec0726f6817c15da9ecb24850bca616d40b53e4b6e1646cb2726
+  host: localhost
+  username: pguser
+  password: trigun19731982
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
