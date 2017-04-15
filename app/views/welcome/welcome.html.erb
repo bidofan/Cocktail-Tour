@@ -24,15 +24,12 @@
         <div class="row">
 
             <div class="col-lg-8">
-            <% if user_signed_in? %>
-    <span>Hello, <%= current_user.email %></span>
-    <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
-<% else %>
-    <%= link_to 'Log in', new_user_session_path %> или <%= link_to 'Sign up', new_user_registration_path %>
-<% end %>
+
 
                 <h1>Site Post Title</h1>
-
+                  <% if user_signed_in? %>
+                <p>Hello, <%= current_user.email %></p>
+                  <% end %>
                 <p class="lead">
                     <%= link_to 'Start Making a Cocktail' , new_recipe_path %>
                 </p>
