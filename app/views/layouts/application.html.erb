@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>CocktailTour</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/blog-post.css" rel="stylesheet">   
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+      <%= render 'shared/navbar' %>
+      </div>
+ 
+      <div class="col-lg-9">
+        <div class="container main">
+          <%= yield %>
+        </div>
+      </div>
+>
+      <div class="col-lg-12">
+        <%= render 'shared/footer' %>
+      </div>
+
+      </div>
+    </div>
   </body>
 </html>

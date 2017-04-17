@@ -1,0 +1,30 @@
+<h1>Listing recipes</h1>
+ 
+ 
+  <% @recipes.each do |recipes| %>
+   <hr>
+
+                <p class="lead">Name:<%= recipes.name  %></p>
+                <p>Recipe: <%= recipes.recipe %></p>
+                                      <ul class="nav nav-pills">
+                        <li role="presentation"><%= link_to 'Show', recipe_path(recipes) %></li>
+                        <li role="presentation"><%= link_to 'Edit', edit_recipe_path(recipes) %></li>
+                        <li role="presentation"><%= link_to 'Remove', recipe_path(recipes),
+              method: :delete,
+              data: { confirm: 'Are you confirm the removing?' } %></li>
+                      </ul>
+                <hr>
+                <div class="well">
+                    <h4>Leave a Comment:</h4>
+
+                      <form role="form">
+                        <div class="form-group">
+                           <textarea class="form-control" rows="3">
+                           </textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+<% end %>
+
+             
